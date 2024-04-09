@@ -14,7 +14,7 @@ Make sure you have Gazebo installed (the model has only been tested in [Gazebo C
 sudo apt install ros-noetic-gazebo-ros-pkgs
 ```
 
-You might also need `ros-noetic-joint-state-publisher` and `ros-noetic-robot-state-publisher`.
+You might also need `ros-noetic-joint-state-publisher`, `ros-noetic-robot-state-publisher`, and `ros-noetic-controller-manager`.
 
 ## Usage
 
