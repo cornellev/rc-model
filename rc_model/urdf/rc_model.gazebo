@@ -4,7 +4,21 @@
 <xacro:property name="body_color" value="Gazebo/Silver" />
 
 <gazebo>
-  <plugin name="control" filename="libgazebo_ros_control.so"/>
+  <plugin name="control" filename="libgazebo_ros_control.so">
+    <robotNamespace>/rc_model</robotNamespace>
+  </plugin>
+  <plugin name="roboticsgroup_upatras_gazebo_plugins" filename="libroboticsgroup_upatras_gazebo_mimic_joint_plugin.so">
+    <robotNamespace>/rc_model</robotNamespace>
+    <joint>servo_angle</joint>
+    <mimicJoint>Revolute 275</mimicJoint>
+    <multiplier>-1</multiplier>
+  </plugin>
+  <plugin name="roboticsgroup_upatras_gazebo_plugins" filename="libroboticsgroup_upatras_gazebo_mimic_joint_plugin.so">
+    <robotNamespace>/rc_model</robotNamespace>
+    <joint>servo_angle</joint>
+    <mimicJoint>Revolute 276</mimicJoint>
+    <multiplier>-1</multiplier>
+  </plugin>
 </gazebo>
 <gazebo reference="base_link">
   <material>${body_color}</material>
