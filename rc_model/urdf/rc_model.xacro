@@ -214,8 +214,11 @@
     </inertial>
     <visual>
       <origin xyz="0.0685 -0.0025 0.003" rpy="0 0 0" />
-      <geometry>
+      <!-- <geometry>
         <mesh filename="package://rc_model/meshes/wheel_1.stl" scale="0.001 0.001 0.001" />
+      </geometry> -->
+      <geometry>
+        <box size="0.01 0.01 0.01" />
       </geometry>
       <material name="silver" />
     </visual>
@@ -290,7 +293,7 @@
     </collision>
   </link>
 
-  <link name="steering_rod_1">
+  <!-- <link name="steering_rod_1">
     <inertial>
       <origin xyz="-3.137386184182134e-13 1.734723475976807e-18 0.00824999999999997" rpy="0 0 0" />
       <mass value="0.0009155582740264544" />
@@ -311,9 +314,9 @@
           scale="0.001 0.001 0.001" />
       </geometry>
     </collision>
-  </link>
+  </link> -->
 
-  <link name="steering_bar_1">
+  <!-- <link name="steering_bar_1">
     <inertial>
       <origin xyz="-0.008747999625029047 -0.014067539563090594 -0.0015000000000000326" rpy="0 0 0" />
       <mass value="0.018019633607194895" />
@@ -334,7 +337,7 @@
           scale="0.001 0.001 0.001" />
       </geometry>
     </collision>
-  </link>
+  </link> -->
 
   <joint name="servo_angle" type="revolute">
     <origin xyz="-0.015 0.0045 -0.018" rpy="0 0 0" />
@@ -422,19 +425,19 @@
     <axis xyz="1.0 -0.0 0.0" />
   </joint>
 
-  <joint name="Rigid 306" type="fixed">
+  <!-- <joint name="Rigid 306" type="fixed">
     <origin xyz="0.0 -0.02 -0.002" rpy="0 0 0" />
     <parent link="servo_horn_1" />
     <child link="steering_rod_1" />
-  </joint>
+  </joint> -->
 
-  <joint name="Revolute 307" type="revolute">
+  <!-- <joint name="Revolute 307" type="revolute">
     <origin xyz="0.0 0.0 0.0165" rpy="0 0 0" />
     <parent link="steering_rod_1" />
     <child link="steering_bar_1" />
     <axis xyz="0.0 0.0 1.0" />
     <limit upper="0.488692" lower="-0.488692" effort="100" velocity="100" />
     <mimic joint="servo_angle" />
-  </joint>
+  </joint> -->
 
 </robot>

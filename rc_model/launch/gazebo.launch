@@ -1,13 +1,5 @@
 <launch>
   <param name="robot_description" command="$(find xacro)/xacro $(find rc_model)/urdf/rc_model.xacro" />
-  
-  <node 
-    pkg="robot_state_publisher"
-    name="state_publisher"
-    type="robot_state_publisher"
-  >
-    <param name="use_sim_time" value="true" />
-  </node>
 
   <node 
     name="spawn_urdf" 
@@ -24,4 +16,10 @@
     <arg name="headless" value="false" />
     <arg name="debug" value="false" />
   </include>
+
+  <node name="state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"
+    respawn="false" output="screen">
+    <!-- <remap from="/joint_states" to="/rc_model/joint_states" /> -->
+  </node>
+
 </launch>

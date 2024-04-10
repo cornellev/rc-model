@@ -1,43 +1,9 @@
-rc_model_controller:
-  # Publish all joint states -----------------------------------
-  joint_state_controller:
-    type: joint_state_controller/JointStateController
-    publish_rate: 50
+# Publish all joint states -----------------------------------
+joint_state_controller:
+  type: joint_state_controller/JointStateController
+  publish_rate: 50
 
-  # Position Controllers --------------------------------------
-  Revolute 304_position_controller:
-    type: effort_controllers/JointPositionController
-    joint: Revolute 304
-    pid: {p: 100.0, i: 0.01, d: 10.0}
-  Revolute 275_position_controller:
-    type: effort_controllers/JointPositionController
-    joint: Revolute 275
-    pid: {p: 100.0, i: 0.01, d: 10.0}
-  Revolute 276_position_controller:
-    type: effort_controllers/JointPositionController
-    joint: Revolute 276
-    pid: {p: 100.0, i: 0.01, d: 10.0}
-  Revolute 277_position_controller:
-    type: effort_controllers/JointPositionController
-    joint: Revolute 277
-    pid: {p: 100.0, i: 0.01, d: 10.0}
-  Revolute 284_position_controller:
-    type: effort_controllers/JointPositionController
-    joint: Revolute 284
-    pid: {p: 100.0, i: 0.01, d: 10.0}
-  Revolute 285_position_controller:
-    type: effort_controllers/JointPositionController
-    joint: Revolute 285
-    pid: {p: 100.0, i: 0.01, d: 10.0}
-  Revolute 286_position_controller:
-    type: effort_controllers/JointPositionController
-    joint: Revolute 286
-    pid: {p: 100.0, i: 0.01, d: 10.0}
-  Revolute 287_position_controller:
-    type: effort_controllers/JointPositionController
-    joint: Revolute 287
-    pid: {p: 100.0, i: 0.01, d: 10.0}
-  Revolute 307_position_controller:
-    type: effort_controllers/JointPositionController
-    joint: Revolute 307
-    pid: {p: 100.0, i: 0.01, d: 10.0}
+# Position Controllers --------------------------------------
+servo_angle_controller:
+  type: effort_controllers/JointEffortController
+  joint: servo_angle
