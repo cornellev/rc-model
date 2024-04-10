@@ -1,129 +1,136 @@
-<?xml version="1.0" ?>
-<robot name="rc_model" xmlns:xacro="http://www.ros.org/wiki/xacro" >
+<?xml version="1.0"?>
+<robot name="rc_model" xmlns:xacro="http://www.ros.org/wiki/xacro">
 
-<xacro:property name="body_color" value="Gazebo/Silver" />
+  <xacro:property name="body_color" value="Gazebo/Silver" />
 
-<gazebo>
-  <plugin name="control" filename="libgazebo_ros_control.so">
-    <robotNamespace>/rc_model</robotNamespace>
-  </plugin>
-  <plugin name="roboticsgroup_upatras_gazebo_plugins" filename="libroboticsgroup_upatras_gazebo_mimic_joint_plugin.so">
-    <robotNamespace>/rc_model</robotNamespace>
-    <joint>servo_angle</joint>
-    <mimicJoint>Revolute 275</mimicJoint>
-    <multiplier>-1</multiplier>
-  </plugin>
-  <plugin name="roboticsgroup_upatras_gazebo_plugins" filename="libroboticsgroup_upatras_gazebo_mimic_joint_plugin.so">
-    <robotNamespace>/rc_model</robotNamespace>
-    <joint>servo_angle</joint>
-    <mimicJoint>Revolute 276</mimicJoint>
-    <multiplier>-1</multiplier>
-  </plugin>
-</gazebo>
-<gazebo reference="base_link">
-  <material>${body_color}</material>
-  <mu1>0.2</mu1>
-  <mu2>0.2</mu2>
-  <selfCollide>false</selfCollide>
-  <gravity>true</gravity>
-</gazebo>
 
-<gazebo reference="servo_horn_1">
-  <material>${body_color}</material>
-  <mu1>0.2</mu1>
-  <mu2>0.2</mu2>
-  <selfCollide>false</selfCollide>
-</gazebo>
+  <gazebo>
+    <plugin name="control" filename="libgazebo_ros_control.so" />
+    <plugin name="roboticsgroup_upatras_gazebo_plugins"
+      filename="libroboticsgroup_upatras_gazebo_mimic_joint_plugin.so">
+      <robotNamespace>/rc_model</robotNamespace>
+      <joint>servo_angle</joint>
+      <mimicJoint>Revolute 275</mimicJoint>
+      <multiplier>-1</multiplier>
+    </plugin>
+    <plugin name="roboticsgroup_upatras_gazebo_plugins"
+      filename="libroboticsgroup_upatras_gazebo_mimic_joint_plugin.so">
+      <robotNamespace>/rc_model</robotNamespace>
+      <joint>servo_angle</joint>
+      <mimicJoint>Revolute 276</mimicJoint>
+      <multiplier>-1</multiplier>
+    </plugin>
 
-<gazebo reference="left_wheel_mount_1">
-  <material>${body_color}</material>
-  <mu1>0.2</mu1>
-  <mu2>0.2</mu2>
-  <selfCollide>false</selfCollide>
-</gazebo>
+    <plugin name="gazebo_ros_joint_state_publisher"
+      filename="libgazebo_ros_joint_state_publisher.so">
+      <updateRate>100.0</updateRate>
+      <jointName>servo_angle</jointName>
+    </plugin>
+  </gazebo>
+  <gazebo reference="base_link">
+    <material>${body_color}</material>
+    <mu1>0.2</mu1>
+    <mu2>0.2</mu2>
+    <selfCollide>false</selfCollide>
+    <gravity>true</gravity>
+  </gazebo>
 
-<gazebo reference="right_wheel_mount_1">
-  <material>${body_color}</material>
-  <mu1>0.2</mu1>
-  <mu2>0.2</mu2>
-  <selfCollide>false</selfCollide>
-</gazebo>
+  <gazebo reference="servo_horn_1">
+    <material>${body_color}</material>
+    <mu1>0.2</mu1>
+    <mu2>0.2</mu2>
+    <selfCollide>false</selfCollide>
+  </gazebo>
 
-<gazebo reference="front_assembly_1">
-  <material>${body_color}</material>
-  <mu1>0.2</mu1>
-  <mu2>0.2</mu2>
-  <selfCollide>false</selfCollide>
-</gazebo>
+  <gazebo reference="left_wheel_mount_1">
+    <material>${body_color}</material>
+    <mu1>0.2</mu1>
+    <mu2>0.2</mu2>
+    <selfCollide>false</selfCollide>
+  </gazebo>
 
-<gazebo reference="suspension_axle_1">
-  <material>${body_color}</material>
-  <mu1>0.2</mu1>
-  <mu2>0.2</mu2>
-  <selfCollide>false</selfCollide>
-</gazebo>
+  <gazebo reference="right_wheel_mount_1">
+    <material>${body_color}</material>
+    <mu1>0.2</mu1>
+    <mu2>0.2</mu2>
+    <selfCollide>false</selfCollide>
+  </gazebo>
 
-<gazebo reference="servo_1">
-  <material>${body_color}</material>
-  <mu1>0.2</mu1>
-  <mu2>0.2</mu2>
-  <selfCollide>false</selfCollide>
-</gazebo>
+  <gazebo reference="front_assembly_1">
+    <material>${body_color}</material>
+    <mu1>0.2</mu1>
+    <mu2>0.2</mu2>
+    <selfCollide>false</selfCollide>
+  </gazebo>
 
-<gazebo reference="motor_1">
-  <material>${body_color}</material>
-  <mu1>0.2</mu1>
-  <mu2>0.2</mu2>
-  <selfCollide>false</selfCollide>
-</gazebo>
+  <gazebo reference="suspension_axle_1">
+    <material>${body_color}</material>
+    <mu1>0.2</mu1>
+    <mu2>0.2</mu2>
+    <selfCollide>false</selfCollide>
+  </gazebo>
 
-<gazebo reference="motor_2">
-  <material>${body_color}</material>
-  <mu1>0.2</mu1>
-  <mu2>0.2</mu2>
-  <selfCollide>false</selfCollide>
-</gazebo>
+  <gazebo reference="servo_1">
+    <material>${body_color}</material>
+    <mu1>0.2</mu1>
+    <mu2>0.2</mu2>
+    <selfCollide>false</selfCollide>
+  </gazebo>
 
-<gazebo reference="wheel_1">
-  <material>${body_color}</material>
-  <mu1>0.2</mu1>
-  <mu2>0.2</mu2>
-  <selfCollide>false</selfCollide>
-</gazebo>
+  <gazebo reference="motor_1">
+    <material>${body_color}</material>
+    <mu1>0.2</mu1>
+    <mu2>0.2</mu2>
+    <selfCollide>false</selfCollide>
+  </gazebo>
 
-<gazebo reference="wheel_2">
-  <material>${body_color}</material>
-  <mu1>0.2</mu1>
-  <mu2>0.2</mu2>
-  <selfCollide>false</selfCollide>
-</gazebo>
+  <gazebo reference="motor_2">
+    <material>${body_color}</material>
+    <mu1>0.2</mu1>
+    <mu2>0.2</mu2>
+    <selfCollide>false</selfCollide>
+  </gazebo>
 
-<gazebo reference="wheel_3">
-  <material>${body_color}</material>
-  <mu1>0.2</mu1>
-  <mu2>0.2</mu2>
-  <selfCollide>false</selfCollide>
-</gazebo>
+  <gazebo reference="wheel_1">
+    <material>${body_color}</material>
+    <mu1>0.2</mu1>
+    <mu2>0.2</mu2>
+    <selfCollide>false</selfCollide>
+  </gazebo>
 
-<gazebo reference="wheel_4">
-  <material>${body_color}</material>
-  <mu1>0.2</mu1>
-  <mu2>0.2</mu2>
-  <selfCollide>false</selfCollide>
-</gazebo>
+  <gazebo reference="wheel_2">
+    <material>${body_color}</material>
+    <mu1>0.2</mu1>
+    <mu2>0.2</mu2>
+    <selfCollide>false</selfCollide>
+  </gazebo>
 
-<gazebo reference="steering_rod_1">
-  <material>${body_color}</material>
-  <mu1>0.2</mu1>
-  <mu2>0.2</mu2>
-  <selfCollide>false</selfCollide>
-</gazebo>
+  <gazebo reference="wheel_3">
+    <material>${body_color}</material>
+    <mu1>0.2</mu1>
+    <mu2>0.2</mu2>
+    <selfCollide>false</selfCollide>
+  </gazebo>
 
-<gazebo reference="steering_bar_1">
-  <material>${body_color}</material>
-  <mu1>0.2</mu1>
-  <mu2>0.2</mu2>
-  <selfCollide>false</selfCollide>
-</gazebo>
+  <gazebo reference="wheel_4">
+    <material>${body_color}</material>
+    <mu1>0.2</mu1>
+    <mu2>0.2</mu2>
+    <selfCollide>false</selfCollide>
+  </gazebo>
+
+  <gazebo reference="steering_rod_1">
+    <material>${body_color}</material>
+    <mu1>0.2</mu1>
+    <mu2>0.2</mu2>
+    <selfCollide>false</selfCollide>
+  </gazebo>
+
+  <gazebo reference="steering_bar_1">
+    <material>${body_color}</material>
+    <mu1>0.2</mu1>
+    <mu2>0.2</mu2>
+    <selfCollide>false</selfCollide>
+  </gazebo>
 
 </robot>

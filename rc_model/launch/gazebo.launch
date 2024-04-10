@@ -15,7 +15,7 @@
     type="spawn_model"
     respawn="false" 
     output="screen"
-    args="-param robot_description -urdf -model rc_model" 
+    args="-urdf -model rc_model -param robot_description" 
   />
 
   <include file="$(find gazebo_ros)/launch/empty_world.launch">
