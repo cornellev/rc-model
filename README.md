@@ -16,7 +16,14 @@ sudo apt install ros-noetic-gazebo-ros-pkgs
 
 In order to use `mimic` joint constraints in Gazebo, you'll need to clone [this repo](https://github.com/roboticsgroup/roboticsgroup_upatras_gazebo_plugins) into your `src/` directory, install `ros-noetic-control-toolbox`, and then build with `catkin_make`.
 
-You might also need `ros-noetic-joint-state-publisher`, `ros-noetic-robot-state-publisher`, and `ros-noetic-controller-manager`.
+You might also need 
+ - `ros-noetic-joint-state-publisher`
+ - `ros-noetic-robot-state-publisher`
+ - `ros-noetic-controller-manager`
+ - `ros-noetic-gazebo-ros-control`
+ - `ros-noetic-joint-state-controller`
+ - `ros-noetic-effort-controllers`
+
 
 ## Usage
 
