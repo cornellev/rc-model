@@ -5,11 +5,11 @@
   <xacro:include filename="$(find rc_model)/urdf/rc_model.trans" />
   <xacro:include filename="$(find rc_model)/urdf/rc_model.gazebo" />
   <link name="base_link">
-    <inertial>
+    <!-- <inertial>
       <origin xyz="-1.3083309184741514e-15 0.12128943795441537 0.03369194136532842" rpy="0 0 0" />
       <mass value="1.3778870164240344" />
       <inertia ixx="0.005759" iyy="0.002706" izz="0.006735" ixy="-0.0" iyz="0.001087" ixz="-0.0" />
-    </inertial>
+    </inertial> -->
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
