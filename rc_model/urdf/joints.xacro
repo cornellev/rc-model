@@ -8,7 +8,7 @@
         <limit upper="0.488692" lower="-0.488692" effort="100" velocity="100" />
     </joint>
 
-    <joint name="Revolute 275" type="revolute">
+    <joint name="left_wheel_mount_turn" type="revolute">
         <origin xyz="0.064 -0.028 -0.02575" rpy="0 0 0" />
         <parent link="front_assembly" />
         <child link="left_wheel_mount" />
@@ -17,7 +17,7 @@
         <mimic joint="servo_angle" multiplier="-1" />
     </joint>
 
-    <joint name="Revolute 276" type="revolute">
+    <joint name="right_wheel_mount_turn" type="revolute">
         <origin xyz="-0.064 -0.028 -0.02575" rpy="0 0 0" />
         <parent link="front_assembly" />
         <child link="right_wheel_mount" />
@@ -58,28 +58,28 @@
         <child link="motor_2" />
     </joint>
 
-    <joint name="front right wheel" type="continuous">
+    <joint name="front_right_wheel" type="continuous">
         <origin xyz="-0.0045 0.0 0.0" rpy="0 0 0" />
         <parent link="right_wheel_mount" />
         <child link="wheel_1" />
         <axis xyz="-1.0 -0.0 0.0" />
     </joint>
 
-    <joint name="front left wheel" type="continuous">
+    <joint name="front_left_wheel" type="continuous">
         <origin xyz="0.0045 0.0 0.0" rpy="0 0 0" />
         <parent link="left_wheel_mount" />
         <child link="wheel_2" />
         <axis xyz="1.0 -0.0 -0.0" />
     </joint>
 
-    <joint name="back right wheel" type="continuous">
+    <joint name="back_right_wheel" type="continuous">
         <origin xyz="-0.0095 0.007 0.0" rpy="0 0 0" />
         <parent link="motor_2" />
         <child link="wheel_3" />
         <axis xyz="-1.0 -0.0 0.0" />
     </joint>
 
-    <joint name="back left wheel" type="continuous">
+    <joint name="back_left_wheel" type="continuous">
         <origin xyz="0.0095 0.007 0.0" rpy="0 0 0" />
         <parent link="motor_1" />
         <child link="wheel_4" />
