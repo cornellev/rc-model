@@ -1,0 +1,103 @@
+<?xml version="1.0"?>
+<robot name="rc_model" xmlns:xacro="http://www.ros.org/wiki/xacro">
+    <joint name="servo_angle" type="revolute">
+        <origin xyz="-0.015 0.0045 -0.018" rpy="0 0 0" />
+        <parent link="servo_1" />
+        <child link="servo_horn_1" />
+        <axis xyz="-0.0 -0.0 -1.0" />
+        <limit upper="0.488692" lower="-0.488692" effort="100" velocity="100" />
+    </joint>
+
+    <joint name="Revolute 275" type="revolute">
+        <origin xyz="0.064 -0.028 -0.02575" rpy="0 0 0" />
+        <parent link="front_assembly_1" />
+        <child link="left_wheel_mount_1" />
+        <axis xyz="-0.0 0.0 1.0" />
+        <limit upper="0.488692" lower="-0.488692" effort="100" velocity="100" />
+        <mimic joint="servo_angle" multiplier="-1" />
+    </joint>
+
+    <joint name="Revolute 276" type="revolute">
+        <origin xyz="-0.064 -0.028 -0.02575" rpy="0 0 0" />
+        <parent link="front_assembly_1" />
+        <child link="right_wheel_mount_1" />
+        <axis xyz="0.0 0.0 1.0" />
+        <limit upper="0.488692" lower="-0.488692" effort="100" velocity="100" />
+        <mimic joint="servo_angle" multiplier="-1" />
+    </joint>
+
+    <joint name="suspension" type="revolute">
+        <origin xyz="-0.0 -0.06413 0.0" rpy="0 0 0" />
+        <parent link="suspension_axle_1" />
+        <child link="front_assembly_1" />
+        <axis xyz="0.0 -1.0 0.0" />
+        <limit upper="0.069813" lower="-0.069813" effort="100" velocity="100" />
+    </joint>
+
+    <joint name="Rigid 278" type="fixed">
+        <origin xyz="0.0 0.09463 0.02275" rpy="0 0 0" />
+        <parent link="base_link" />
+        <child link="suspension_axle_1" />
+    </joint>
+
+    <joint name="Rigid 279" type="fixed">
+        <origin xyz="0.025 -0.0205 -0.02775" rpy="0 0 0" />
+        <parent link="front_assembly_1" />
+        <child link="servo_1" />
+    </joint>
+
+    <joint name="Rigid 280" type="fixed">
+        <origin xyz="0.063 0.18238 -0.003" rpy="0 0 0" />
+        <parent link="base_link" />
+        <child link="motor_1" />
+    </joint>
+
+    <joint name="Rigid 281" type="fixed">
+        <origin xyz="-0.063 0.18238 -0.003" rpy="0 0 0" />
+        <parent link="base_link" />
+        <child link="motor_2" />
+    </joint>
+
+    <joint name="front right wheel" type="continuous">
+        <origin xyz="-0.0045 0.0 0.0" rpy="0 0 0" />
+        <parent link="right_wheel_mount_1" />
+        <child link="wheel_1" />
+        <axis xyz="-1.0 -0.0 0.0" />
+    </joint>
+
+    <joint name="front left wheel" type="continuous">
+        <origin xyz="0.0045 0.0 0.0" rpy="0 0 0" />
+        <parent link="left_wheel_mount_1" />
+        <child link="wheel_2" />
+        <axis xyz="1.0 -0.0 -0.0" />
+    </joint>
+
+    <joint name="back right wheel" type="continuous">
+        <origin xyz="-0.0095 0.007 0.0" rpy="0 0 0" />
+        <parent link="motor_2" />
+        <child link="wheel_3" />
+        <axis xyz="-1.0 -0.0 0.0" />
+    </joint>
+
+    <joint name="back left wheel" type="continuous">
+        <origin xyz="0.0095 0.007 0.0" rpy="0 0 0" />
+        <parent link="motor_1" />
+        <child link="wheel_4" />
+        <axis xyz="1.0 -0.0 0.0" />
+    </joint>
+
+    <!-- <joint name="Rigid 306" type="fixed">
+        <origin xyz="0.0 -0.02 -0.002" rpy="0 0 0" />
+        <parent link="servo_horn_1" />
+        <child link="steering_rod_1" />
+      </joint> -->
+
+    <!-- <joint name="Revolute 307" type="revolute">
+        <origin xyz="0.0 0.0 0.0165" rpy="0 0 0" />
+        <parent link="steering_rod_1" />
+        <child link="steering_bar_1" />
+        <axis xyz="0.0 0.0 1.0" />
+        <limit upper="0.488692" lower="-0.488692" effort="100" velocity="100" />
+        <mimic joint="servo_angle" />
+      </joint> -->
+</robot>

@@ -33,7 +33,8 @@ To preview the URDF in RViz and expose a joint publisher, run the `display.launc
 roslaunch rc_model display.launch
 ```
 
-> [!NOTE] Very little experimentation has been done with Gazebo integration so far, but that will be documented here once we know more about it.
+> [!NOTE]
+> Very little experimentation has been done with Gazebo integration so far, but that will be documented here once we know more about it.
 
 ## Modification
 
