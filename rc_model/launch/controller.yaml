@@ -4,6 +4,20 @@ joint_state_controller:
   publish_rate: 50
 
 # Position Controllers --------------------------------------
-servo_angle_controller:
+left_wheel_mount_turn_controller:
+  type: effort_controllers/JointPositionController
+  joint: left_wheel_mount_turn
+  pid: {p: 10.0, i: 0.0, d: 1.0}
+
+right_wheel_mount_turn_controller:
+  type: effort_controllers/JointPositionController
+  joint: right_wheel_mount_turn
+  pid: {p: 10.0, i: 0.0, d: 1.0}
+
+back_right_wheel_controller:
   type: effort_controllers/JointEffortController
-  joint: servo_angle
+  joint: back_right_wheel
+
+back_left_wheel_controller:
+  type: effort_controllers/JointEffortController
+  joint: back_left_wheel
