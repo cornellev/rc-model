@@ -102,29 +102,29 @@
 
   <gazebo reference="wheel_1">
     <material>${body_color}</material>
-    <mu1>0.2</mu1>
-    <mu2>0.2</mu2>
+    <mu1>200</mu1>
+    <mu2>200</mu2>
     <selfCollide>false</selfCollide>
   </gazebo>
 
   <gazebo reference="wheel_2">
     <material>${body_color}</material>
-    <mu1>0.2</mu1>
-    <mu2>0.2</mu2>
+    <mu1>200</mu1>
+    <mu2>200</mu2>
     <selfCollide>false</selfCollide>
   </gazebo>
 
   <gazebo reference="wheel_3">
     <material>${body_color}</material>
-    <mu1>0.2</mu1>
-    <mu2>0.2</mu2>
+    <mu1>200</mu1>
+    <mu2>200</mu2>
     <selfCollide>false</selfCollide>
   </gazebo>
 
   <gazebo reference="wheel_4">
     <material>${body_color}</material>
-    <mu1>0.2</mu1>
-    <mu2>0.2</mu2>
+    <mu1>200</mu1>
+    <mu2>200</mu2>
     <selfCollide>false</selfCollide>
   </gazebo>
 
