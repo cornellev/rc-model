@@ -1,6 +1,6 @@
 # rc-model
 
-_Jason Klein (Spring 2024)_
+_Jason Klein, Myles Pasetsky (Spring 2024)_
 
 URDF model of the rc cars for use in simulators. Exported from Fusion360 CAD model using [fusion2urdf](https://github.com/syuntoku14/fusion2urdf/blob/master/URDF_Exporter/core/Joint.py), with additional post-processing tweaks to get the Ackermann linkage lined up correctly. More detail on these steps is in [Modification](#modification).
 
@@ -27,11 +27,24 @@ You might also need
 
 ## Usage
 
+### RViz
+
 To preview the URDF in RViz and expose a joint publisher, run the `display.launch` file from the `rc_model` package using
 
 ```bash
 roslaunch rc_model display.launch
 ```
+
+### Gazebo
+
+Run both the Gazebo simulator and the controller with
+
+```bash
+roslaunch rc_model gazebo.launch
+roslaunch rc_model controller.launch
+```
+
+This will expose a couple topics with names ending in `command`. Publish to those or use `rqt_gui` for convenience.
 
 > [!NOTE]
 > Very little experimentation has been done with Gazebo integration so far, but that will be documented here once we know more about it.
