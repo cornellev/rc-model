@@ -23,7 +23,7 @@
         </collision>
     </link>
 
-    <link name="servo_horn_1">
+    <link name="servo_horn">
         <inertial>
             <origin xyz="-1.460882973575682e-05 -0.007871889996444085 0.0006174758834835425"
                 rpy="0 0 0" />
@@ -33,7 +33,7 @@
         <visual>
             <origin xyz="-0.01 -0.0145 0.023" rpy="0 0 0" />
             <geometry>
-                <mesh filename="package://rc_model/meshes/servo_horn_1.stl"
+                <mesh filename="package://rc_model/meshes/servo_horn.stl"
                     scale="0.001 0.001 0.001" />
             </geometry>
             <material name="silver" />
@@ -41,13 +41,13 @@
         <collision>
             <origin xyz="-0.01 -0.0145 0.023" rpy="0 0 0" />
             <geometry>
-                <mesh filename="package://rc_model/meshes/servo_horn_1.stl"
+                <mesh filename="package://rc_model/meshes/servo_horn.stl"
                     scale="0.001 0.001 0.001" />
             </geometry>
         </collision>
     </link>
 
-    <link name="left_wheel_mount_1">
+    <link name="left_wheel_mount">
         <inertial>
             <origin xyz="0.0001100665752926111 -0.0003109939838788164 -0.00016990269857806864"
                 rpy="0 0 0" />
@@ -57,7 +57,7 @@
         <visual>
             <origin xyz="-0.064 -0.0025 0.003" rpy="0 0 0" />
             <geometry>
-                <mesh filename="package://rc_model/meshes/left_wheel_mount_1.stl"
+                <mesh filename="package://rc_model/meshes/left_wheel_mount.stl"
                     scale="0.001 0.001 0.001" />
             </geometry>
             <material name="silver" />
@@ -65,13 +65,13 @@
         <collision>
             <origin xyz="-0.064 -0.0025 0.003" rpy="0 0 0" />
             <geometry>
-                <mesh filename="package://rc_model/meshes/left_wheel_mount_1.stl"
+                <mesh filename="package://rc_model/meshes/left_wheel_mount.stl"
                     scale="0.001 0.001 0.001" />
             </geometry>
         </collision>
     </link>
 
-    <link name="right_wheel_mount_1">
+    <link name="right_wheel_mount">
         <inertial>
             <origin xyz="-0.00011006657149828514 -0.00031099398387884024 -0.00016990269874315057"
                 rpy="0 0 0" />
@@ -81,7 +81,7 @@
         <visual>
             <origin xyz="0.064 -0.0025 0.003" rpy="0 0 0" />
             <geometry>
-                <mesh filename="package://rc_model/meshes/right_wheel_mount_1.stl"
+                <mesh filename="package://rc_model/meshes/right_wheel_mount.stl"
                     scale="0.001 0.001 0.001" />
             </geometry>
             <material name="silver" />
@@ -89,13 +89,13 @@
         <collision>
             <origin xyz="0.064 -0.0025 0.003" rpy="0 0 0" />
             <geometry>
-                <mesh filename="package://rc_model/meshes/right_wheel_mount_1.stl"
+                <mesh filename="package://rc_model/meshes/right_wheel_mount.stl"
                     scale="0.001 0.001 0.001" />
             </geometry>
         </collision>
     </link>
 
-    <link name="front_assembly_1">
+    <link name="front_assembly">
         <inertial>
             <origin xyz="2.0263603307538467e-06 -0.013870173245129229 -0.010153618514841685"
                 rpy="0 0 0" />
@@ -106,7 +106,7 @@
         <visual>
             <origin xyz="0.0 -0.0305 -0.02275" rpy="0 0 0" />
             <geometry>
-                <mesh filename="package://rc_model/meshes/front_assembly_1.stl"
+                <mesh filename="package://rc_model/meshes/front_assembly.stl"
                     scale="0.001 0.001 0.001" />
             </geometry>
             <material name="silver" />
@@ -114,13 +114,13 @@
         <collision>
             <origin xyz="0.0 -0.0305 -0.02275" rpy="0 0 0" />
             <geometry>
-                <mesh filename="package://rc_model/meshes/front_assembly_1.stl"
+                <mesh filename="package://rc_model/meshes/front_assembly.stl"
                     scale="0.001 0.001 0.001" />
             </geometry>
         </collision>
     </link>
 
-    <link name="suspension_axle_1">
+    <link name="suspension_axle">
         <inertial>
             <origin xyz="-3.669079600359632e-17 -0.03206500000000001 3.469446951953614e-18"
                 rpy="0 0 0" />
@@ -130,7 +130,7 @@
         <visual>
             <origin xyz="-0.0 -0.09463 -0.02275" rpy="0 0 0" />
             <geometry>
-                <mesh filename="package://rc_model/meshes/suspension_axle_1.stl"
+                <mesh filename="package://rc_model/meshes/suspension_axle.stl"
                     scale="0.001 0.001 0.001" />
             </geometry>
             <material name="silver" />
@@ -138,13 +138,13 @@
         <collision>
             <origin xyz="-0.0 -0.09463 -0.02275" rpy="0 0 0" />
             <geometry>
-                <mesh filename="package://rc_model/meshes/suspension_axle_1.stl"
+                <mesh filename="package://rc_model/meshes/suspension_axle.stl"
                     scale="0.001 0.001 0.001" />
             </geometry>
         </collision>
     </link>
 
-    <link name="servo_1">
+    <link name="servo">
         <inertial>
             <origin xyz="-0.024893878005047748 0.0045000006838291935 0.010046478190773773"
                 rpy="0 0 0" />
@@ -154,14 +154,14 @@
         <visual>
             <origin xyz="-0.025 -0.01 0.005" rpy="0 0 0" />
             <geometry>
-                <mesh filename="package://rc_model/meshes/servo_1.stl" scale="0.001 0.001 0.001" />
+                <mesh filename="package://rc_model/meshes/servo.stl" scale="0.001 0.001 0.001" />
             </geometry>
             <material name="silver" />
         </visual>
         <collision>
             <origin xyz="-0.025 -0.01 0.005" rpy="0 0 0" />
             <geometry>
-                <mesh filename="package://rc_model/meshes/servo_1.stl" scale="0.001 0.001 0.001" />
+                <mesh filename="package://rc_model/meshes/servo.stl" scale="0.001 0.001 0.001" />
             </geometry>
         </collision>
     </link>
@@ -219,11 +219,8 @@
         </inertial>
         <visual>
             <origin xyz="0.0685 -0.0025 0.003" rpy="0 0 0" />
-            <!-- <geometry>
-            <mesh filename="package://rc_model/meshes/wheel_1.stl" scale="0.001 0.001 0.001" />
-          </geometry> -->
             <geometry>
-                <box size="0.01 0.01 0.01" />
+                <mesh filename="package://rc_model/meshes/wheel_1.stl" scale="0.001 0.001 0.001" />
             </geometry>
             <material name="silver" />
         </visual>
