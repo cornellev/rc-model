@@ -1,0 +1,9 @@
+<launch>
+    <include file="$(find rc_model)/launch/gazebo.launch"/>
+    <include file="$(find rc_model)/launch/controller.launch"/>
+
+    <node name="speed_controller" pkg="rc_model" type="speed_controller.py" />
+    <node name="steer_controller" pkg="rc_model" type="steer_controller.py" />
+    <node name="rqt_gui" pkg="rqt_gui" type="rqt_gui"/>
+
+</launch>
