@@ -16,8 +16,8 @@ right_wheel_mount_turn_controller:
 
 back_right_wheel_controller:
   type: effort_controllers/JointEffortController
-  joint: back_right_wheel
+  joint: back_right_wheel_joint
 
 back_left_wheel_controller:
   type: effort_controllers/JointEffortController
-  joint: back_left_wheel
+  joint: back_left_wheel_joint

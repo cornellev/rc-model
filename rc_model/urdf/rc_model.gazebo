@@ -6,7 +6,7 @@
 
   <gazebo>
     <plugin name="control" filename="libgazebo_ros_control.so" />
-    
+
     <!-- <plugin name="roboticsgroup_upatras_gazebo_plugins"
       filename="libroboticsgroup_upatras_gazebo_mimic_joint_plugin.so">
       <robotNamespace>/rc_model</robotNamespace>
@@ -86,56 +86,56 @@
     <selfCollide>false</selfCollide>
   </gazebo>
 
-  <gazebo reference="motor_1">
+  <gazebo reference="left_motor">
     <material>${body_color}</material>
     <mu1>0.2</mu1>
     <mu2>0.2</mu2>
     <selfCollide>false</selfCollide>
   </gazebo>
 
-  <gazebo reference="motor_2">
+  <gazebo reference="right_motor">
     <material>${body_color}</material>
     <mu1>0.2</mu1>
     <mu2>0.2</mu2>
     <selfCollide>false</selfCollide>
   </gazebo>
 
-  <gazebo reference="wheel_1">
+  <gazebo reference="front_right_wheel">
     <material>${body_color}</material>
     <mu1>200</mu1>
     <mu2>200</mu2>
     <selfCollide>false</selfCollide>
   </gazebo>
 
-  <gazebo reference="wheel_2">
+  <gazebo reference="front_left_wheel">
     <material>${body_color}</material>
     <mu1>200</mu1>
     <mu2>200</mu2>
     <selfCollide>false</selfCollide>
   </gazebo>
 
-  <gazebo reference="wheel_3">
+  <gazebo reference="back_right_wheel">
     <material>${body_color}</material>
     <mu1>200</mu1>
     <mu2>200</mu2>
     <selfCollide>false</selfCollide>
   </gazebo>
 
-  <gazebo reference="wheel_4">
+  <gazebo reference="back_left_wheel">
     <material>${body_color}</material>
     <mu1>200</mu1>
     <mu2>200</mu2>
     <selfCollide>false</selfCollide>
   </gazebo>
 
-  <gazebo reference="steering_rod_1">
+  <gazebo reference="steering_rod">
     <material>${body_color}</material>
     <mu1>0.2</mu1>
     <mu2>0.2</mu2>
     <selfCollide>false</selfCollide>
   </gazebo>
 
-  <gazebo reference="steering_bar_1">
+  <gazebo reference="steering_bar">
     <material>${body_color}</material>
     <mu1>0.2</mu1>
     <mu2>0.2</mu2>

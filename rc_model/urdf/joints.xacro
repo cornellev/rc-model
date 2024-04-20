@@ -49,53 +49,53 @@
     <joint name="Rigid 280" type="fixed">
         <origin xyz="0.063 0.18238 -0.003" rpy="0 0 0" />
         <parent link="base_link" />
-        <child link="motor_1" />
+        <child link="left_motor" />
     </joint>
 
     <joint name="Rigid 281" type="fixed">
         <origin xyz="-0.063 0.18238 -0.003" rpy="0 0 0" />
         <parent link="base_link" />
-        <child link="motor_2" />
+        <child link="right_motor" />
     </joint>
 
-    <joint name="front_right_wheel" type="continuous">
+    <joint name="front_right_wheel_joint" type="continuous">
         <origin xyz="-0.0045 0.0 0.0" rpy="0 0 0" />
         <parent link="right_wheel_mount" />
-        <child link="wheel_1" />
+        <child link="front_right_wheel" />
         <axis xyz="-1.0 -0.0 0.0" />
     </joint>
 
-    <joint name="front_left_wheel" type="continuous">
+    <joint name="front_left_wheel_joint" type="continuous">
         <origin xyz="0.0045 0.0 0.0" rpy="0 0 0" />
         <parent link="left_wheel_mount" />
-        <child link="wheel_2" />
+        <child link="front_left_wheel" />
         <axis xyz="1.0 -0.0 -0.0" />
     </joint>
 
-    <joint name="back_right_wheel" type="continuous">
+    <joint name="back_right_wheel_joint" type="continuous">
         <origin xyz="-0.0095 0.007 0.0" rpy="0 0 0" />
-        <parent link="motor_2" />
-        <child link="wheel_3" />
+        <parent link="right_motor" />
+        <child link="back_right_wheel" />
         <axis xyz="-1.0 -0.0 0.0" />
     </joint>
 
-    <joint name="back_left_wheel" type="continuous">
+    <joint name="back_left_wheel_joint" type="continuous">
         <origin xyz="0.0095 0.007 0.0" rpy="0 0 0" />
-        <parent link="motor_1" />
-        <child link="wheel_4" />
+        <parent link="left_motor" />
+        <child link="back_left_wheel" />
         <axis xyz="1.0 -0.0 0.0" />
     </joint>
 
     <!-- <joint name="Rigid 306" type="fixed">
         <origin xyz="0.0 -0.02 -0.002" rpy="0 0 0" />
         <parent link="servo_horn" />
-        <child link="steering_rod_1" />
+        <child link="steering_rod" />
       </joint> -->
 
     <!-- <joint name="Revolute 307" type="revolute">
         <origin xyz="0.0 0.0 0.0165" rpy="0 0 0" />
-        <parent link="steering_rod_1" />
-        <child link="steering_bar_1" />
+        <parent link="steering_rod" />
+        <child link="steering_bar" />
         <axis xyz="0.0 0.0 1.0" />
         <limit upper="0.488692" lower="-0.488692" effort="100" velocity="100" />
         <mimic joint="servo_angle" />

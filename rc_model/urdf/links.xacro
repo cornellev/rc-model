@@ -166,7 +166,7 @@
         </collision>
     </link>
 
-    <link name="motor_1">
+    <link name="left_motor">
         <inertial>
             <origin xyz="-0.0245862223060676 0.00032401346399821285 -5.755815434930599e-06"
                 rpy="0 0 0" />
@@ -176,19 +176,19 @@
         <visual>
             <origin xyz="-0.063 -0.18238 0.003" rpy="0 0 0" />
             <geometry>
-                <mesh filename="package://rc_model/meshes/motor_1.stl" scale="0.001 0.001 0.001" />
+                <mesh filename="package://rc_model/meshes/left_motor.stl" scale="0.001 0.001 0.001" />
             </geometry>
             <material name="silver" />
         </visual>
         <collision>
             <origin xyz="-0.063 -0.18238 0.003" rpy="0 0 0" />
             <geometry>
-                <mesh filename="package://rc_model/meshes/motor_1.stl" scale="0.001 0.001 0.001" />
+                <mesh filename="package://rc_model/meshes/left_motor.stl" scale="0.001 0.001 0.001" />
             </geometry>
         </collision>
     </link>
 
-    <link name="motor_2">
+    <link name="right_motor">
         <inertial>
             <origin xyz="0.024586222306067662 0.00032401346399821285 5.7558154691037845e-06"
                 rpy="0 0 0" />
@@ -198,19 +198,19 @@
         <visual>
             <origin xyz="0.063 -0.18238 0.003" rpy="0 0 0" />
             <geometry>
-                <mesh filename="package://rc_model/meshes/motor_2.stl" scale="0.001 0.001 0.001" />
+                <mesh filename="package://rc_model/meshes/right_motor.stl" scale="0.001 0.001 0.001" />
             </geometry>
             <material name="silver" />
         </visual>
         <collision>
             <origin xyz="0.063 -0.18238 0.003" rpy="0 0 0" />
             <geometry>
-                <mesh filename="package://rc_model/meshes/motor_2.stl" scale="0.001 0.001 0.001" />
+                <mesh filename="package://rc_model/meshes/right_motor.stl" scale="0.001 0.001 0.001" />
             </geometry>
         </collision>
     </link>
 
-    <link name="wheel_1">
+    <link name="front_right_wheel">
         <inertial>
             <origin xyz="-0.015146771015638341 1.0053778219838716e-06 -2.3198153083388295e-08"
                 rpy="0 0 0" />
@@ -220,19 +220,21 @@
         <visual>
             <origin xyz="0.0685 -0.0025 0.003" rpy="0 0 0" />
             <geometry>
-                <mesh filename="package://rc_model/meshes/wheel_1.stl" scale="0.001 0.001 0.001" />
+                <mesh filename="package://rc_model/meshes/front_right_wheel_collision.stl"
+                    scale="0.001 0.001 0.001" />
             </geometry>
             <material name="silver" />
         </visual>
         <collision>
             <origin xyz="0.0685 -0.0025 0.003" rpy="0 0 0" />
             <geometry>
-                <mesh filename="package://rc_model/meshes/wheel_1.stl" scale="0.001 0.001 0.001" />
+                <mesh filename="package://rc_model/meshes/front_right_wheel_collision.stl"
+                    scale="0.001 0.001 0.001" />
             </geometry>
         </collision>
     </link>
 
-    <link name="wheel_2">
+    <link name="front_left_wheel">
         <inertial>
             <origin xyz="0.015146771015638272 -1.00537782258929e-06 -2.319815317055815e-08"
                 rpy="0 0 0" />
@@ -242,19 +244,21 @@
         <visual>
             <origin xyz="-0.0685 -0.0025 0.003" rpy="0 0 0" />
             <geometry>
-                <mesh filename="package://rc_model/meshes/wheel_2.stl" scale="0.001 0.001 0.001" />
+                <mesh filename="package://rc_model/meshes/front_left_wheel_collision.stl"
+                    scale="0.001 0.001 0.001" />
             </geometry>
             <material name="silver" />
         </visual>
         <collision>
             <origin xyz="-0.0685 -0.0025 0.003" rpy="0 0 0" />
             <geometry>
-                <mesh filename="package://rc_model/meshes/wheel_2.stl" scale="0.001 0.001 0.001" />
+                <mesh filename="package://rc_model/meshes/front_left_wheel_collision.stl"
+                    scale="0.001 0.001 0.001" />
             </geometry>
         </collision>
     </link>
 
-    <link name="wheel_3">
+    <link name="back_right_wheel">
         <inertial>
             <origin xyz="-0.015146771015636287 1.00537782199428e-06 -2.3198136071388847e-08"
                 rpy="0 0 0" />
@@ -264,19 +268,21 @@
         <visual>
             <origin xyz="0.0725 -0.18938 0.003" rpy="0 0 0" />
             <geometry>
-                <mesh filename="package://rc_model/meshes/wheel_3.stl" scale="0.001 0.001 0.001" />
+                <mesh filename="package://rc_model/meshes/back_right_wheel_collision.stl"
+                    scale="0.001 0.001 0.001" />
             </geometry>
             <material name="silver" />
         </visual>
         <collision>
             <origin xyz="0.0725 -0.18938 0.003" rpy="0 0 0" />
             <geometry>
-                <mesh filename="package://rc_model/meshes/wheel_3.stl" scale="0.001 0.001 0.001" />
+                <mesh filename="package://rc_model/meshes/back_right_wheel_collision.stl"
+                    scale="0.001 0.001 0.001" />
             </geometry>
         </collision>
     </link>
 
-    <link name="wheel_4">
+    <link name="back_left_wheel">
         <inertial>
             <origin xyz="0.015146771015636287 -1.0053778232710364e-06 -2.319813606314891e-08"
                 rpy="0 0 0" />
@@ -286,14 +292,16 @@
         <visual>
             <origin xyz="-0.0725 -0.18938 0.003" rpy="0 0 0" />
             <geometry>
-                <mesh filename="package://rc_model/meshes/wheel_4.stl" scale="0.001 0.001 0.001" />
+                <mesh filename="package://rc_model/meshes/back_left_wheel_collision.stl"
+                    scale="0.001 0.001 0.001" />
             </geometry>
             <material name="silver" />
         </visual>
         <collision>
             <origin xyz="-0.0725 -0.18938 0.003" rpy="0 0 0" />
             <geometry>
-                <mesh filename="package://rc_model/meshes/wheel_4.stl" scale="0.001 0.001 0.001" />
+                <mesh filename="package://rc_model/meshes/back_left_wheel_collision.stl"
+                    scale="0.001 0.001 0.001" />
             </geometry>
         </collision>
     </link>
