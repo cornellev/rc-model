@@ -7,7 +7,7 @@
     type="spawner" 
     respawn="false"
     output="screen" 
-    args="back_right_wheel_controller back_left_wheel_controller left_wheel_mount_turn_controller right_wheel_mount_turn_controller joint_state_controller " 
+    args="back_right_wheel_controller back_left_wheel_controller left_wheel_mount_turn_controller right_wheel_mount_turn_controller joint_state_controller" 
   />
   
   <!-- <node name="state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"
