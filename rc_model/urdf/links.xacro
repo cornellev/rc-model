@@ -144,6 +144,9 @@
         </collision>
     </link>
 
+    <link name="imu_link">
+    </link>
+
     <link name="servo">
         <inertial>
             <origin xyz="-0.024893878005047748 0.0045000006838291935 0.010046478190773773"

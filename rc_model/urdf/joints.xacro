@@ -1,5 +1,6 @@
 <?xml version="1.0"?>
 <robot name="rc_model" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
     <joint name="servo_angle" type="revolute">
         <origin xyz="-0.015 0.0045 -0.018" rpy="0 0 0" />
         <parent link="servo" />
@@ -32,6 +33,12 @@
         <child link="front_assembly" />
         <axis xyz="0.0 -1.0 0.0" />
         <limit upper="0.069813" lower="-0.069813" effort="100" velocity="100" />
+    </joint>
+
+    <joint name="imu" type="fixed">
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <parent link="suspension_axle" />
+        <child link="imu_link" />
     </joint>
 
     <joint name="Rigid 278" type="fixed">
