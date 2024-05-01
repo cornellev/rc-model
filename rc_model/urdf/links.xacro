@@ -154,6 +154,14 @@
         <geometry>
         <box size="0.1 0.1 0.1"/>
         </geometry> -->
+
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <box size="0.01 0.01 0.01" />
+            </geometry>
+            <material name="silver" />
+        </visual>
     </link>
 
     <link name="servo">

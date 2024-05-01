@@ -44,8 +44,8 @@
     <joint name="lidar_joint" type="fixed">
         <!-- <axis xyz="0 1 0" /> -->
         <!-- <origin xyz="0 0 ${height3 - axel_offset/2}" rpy="0 0 0"/> -->
-        <origin xyz="0 0 0" rpy="0 0 0" />
-        <parent link="suspension_axle"/>
+        <origin xyz="0 0 0.075" rpy="0 0 0" />
+        <parent link="base_link"/>
         <child link="lidar_link"/>
     </joint>
 
