@@ -28,7 +28,7 @@
     <sensor type="gpu_ray" name="head_hokuyo_sensor">
       <pose>0 0 0 0 0 0</pose>
       <visualize>false</visualize>
-      <update_rate>40</update_rate>
+      <update_rate>6</update_rate>
       <ray>
         <scan>
           <horizontal>
@@ -55,7 +55,7 @@
       </ray>
       <plugin name="gazebo_ros_head_hokuyo_controller" filename="libgazebo_ros_gpu_laser.so">
         <topicName>/scan</topicName>
-        <frameName>hokuyo_link</frameName>
+        <frameName>lidar_link</frameName>
       </plugin>
     </sensor>
   </gazebo>
